@@ -99,7 +99,8 @@ class BaseSampler(BasePrimitive, Generic[T]):
 
     def __init__(
         self,
-        *,
+        circuits: Iterable[QuantumCircuit] | QuantumCircuit | None = None,
+        parameters: Iterable[Iterable[Parameter]] | None = None,
         options: dict | None = None,
     ):
         """
